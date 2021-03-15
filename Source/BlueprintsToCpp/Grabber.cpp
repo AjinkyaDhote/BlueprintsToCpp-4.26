@@ -11,6 +11,7 @@ UGrabber::UGrabber()
 	PrimaryComponentTick.bCanEverTick = true;
 
 	// ...
+	UE_LOG( LogTemp, Warning, TEXT( "Grabber Constructor" ) );
 }
 
 
@@ -20,6 +21,7 @@ void UGrabber::BeginPlay()
 	Super::BeginPlay();
 
 	// ...
+	UE_LOG( LogTemp, Warning, TEXT( "Grabber BeginPlay" ) );
 	
 }
 
@@ -30,5 +32,6 @@ void UGrabber::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompone
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
 	// ...
+	UE_LOG( LogTemp, Warning, TEXT( "Grabber TickComponent" ) );
 }
 
