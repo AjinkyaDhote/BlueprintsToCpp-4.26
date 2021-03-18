@@ -4,7 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Components/SceneComponent.h"
-
+#include "Components/PrimitiveComponent.h"
 
 
 #include "PhysicsEngine/PhysicsHandleComponent.h"
@@ -33,6 +33,12 @@ protected:
 
 	UFUNCTION( BlueprintCallable, BlueprintPure )
 	UPhysicsHandleComponent* GetPhysicsComponent() const;
+
+	UFUNCTION( BlueprintCallable, BlueprintImplementableEvent )
+	void NotifyQuestActor( AActor* actor );
+
+	UFUNCTION( BlueprintCallable, BlueprintNativeEvent )
+	bool TraceForPhysicsBodies( AActor*& Actor, UPrimitiveComponent*& PrimitveComponent );
 
 public:	
 	// Called every frame
